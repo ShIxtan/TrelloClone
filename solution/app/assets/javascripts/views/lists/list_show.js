@@ -81,8 +81,13 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
     this.addSubview('.list-footer', formView);
   },
 
+  saveCards: function(event) {
+    event.stopPropagation(); // Prevent list sorting listener from firing.
+    this.saveOrds();
+  },
+
   setHeight: function() {
-    this.$('.list-cards').css('')
+    this.$('.list-cards').css('');
     var listsHeight = this.$el.parent().height();
     var listHeight = this.$el.height();
     var headerHeight = this.$('.list-heading').height();
@@ -91,11 +96,6 @@ TrelloClone.Views.ListShow = Backbone.CompositeView.extend({
 
     this.$('.list-cards').css('max-height',
           listsHeight - headerHeight - footerHeight - 11);
-  },
-
-  saveCards: function(event) {
-    event.stopPropagation(); // Prevent list sorting listener from firing.
-    this.saveOrds();
   }
 });
 
