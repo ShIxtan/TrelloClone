@@ -35,7 +35,6 @@ TrelloClone.Routers.Router = Backbone.Router.extend({
   _swapView: function (view) {
     this.currentView && this.currentView.remove();
     this.currentView = view;
-    // TODO: Save jQuery object for #main to instance variable in initialize.
     this.$rootEl.html(view.render().$el);
   }
 });
