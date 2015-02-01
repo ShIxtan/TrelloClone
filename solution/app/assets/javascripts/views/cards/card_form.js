@@ -16,7 +16,7 @@ TrelloClone.Views.CardForm = Backbone.LinkFormView.extend({
 
   render: function () {
     var content;
-    if(this.formShowing) {
+    if (this.formShowing) {
       content = this.formTemplate();
     } else {
       content = this.linkTemplate();

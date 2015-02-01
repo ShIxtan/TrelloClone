@@ -10,7 +10,7 @@ Backbone.LinkFormView = Backbone.View.extend({
 
   render: function () {
     var content;
-    if(this.formShowing) {
+    if (this.formShowing) {
       content = this.formTemplate();
     } else {
       content = this.linkTemplate();
@@ -27,7 +27,7 @@ Backbone.LinkFormView = Backbone.View.extend({
   },
 
   maybeCreate: function (event) {
-    if(event.keyCode === 13) {
+    if (event.keyCode === 13) {
       this.create(event);
     }
   },

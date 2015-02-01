@@ -10,7 +10,7 @@ TrelloClone.Collections.Cards = Backbone.Collection.extend({
   getOrFetch: function (id) {
     var card = this.get(id),
       cards = this;
-    if(!card) {
+    if (!card) {
       card = new TrelloClone.Models.Card({ id: id });
       card.fetch({
         success: function () {
