@@ -167,6 +167,10 @@ ul {
   vertical-align: top;
 }
 
+#list-form {
+  width: 260px;
+}
+
 #lists {
   height: 100%;
 }
@@ -177,8 +181,8 @@ ul {
   margin: 0 5px;
   border-radius: 3px;
   max-height: 100%;
-  overflow: scroll;
   padding: 4px 3px 3px;
+  border: 1px solid gray;
 }
 
 .list-cards {
@@ -272,4 +276,13 @@ ul {
   &:hover {
     text-decoration: none;
   }
+}
+
+.ui-sortable-helper {
+  -ms-transform: rotate(4deg);
+  -moz-transform: rotate(4deg);
+  -webkit-transform: rotate(4deg);
+  transform: rotate(4deg);
+  z-index: 1000;
+  position: relative;
 }
