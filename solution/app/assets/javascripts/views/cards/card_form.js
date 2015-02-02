@@ -6,8 +6,9 @@ TrelloClone.Views.CardForm = Backbone.LinkFormView.extend({
     event.preventDefault();
 
     this.collection.create({
-      title: this.$('textarea').val(),
-      list_id: this.collection.list.id
+      list_id: this.collection.list.id,
+      ord: this.collection.length,
+      title: this.$('textarea').val()
     }, { wait: true });
 
     this.$('textarea').val('');

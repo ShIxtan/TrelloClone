@@ -6,8 +6,9 @@ TrelloClone.Views.ListForm = Backbone.LinkFormView.extend({
   create: function (event) {
     event.preventDefault();
     this.collection.create({
-      title: this.$('textarea').val(),
-      board_id: this.collection.board.id
+      board_id: this.collection.board.id,
+      ord: this.collection.length,
+      title: this.$('textarea').val()
     }, { wait: true });
     this.$('textarea').val('');
     this.$('textarea').focus();
